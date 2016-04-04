@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\main.ts" Url="Scripts/angular2/app/main.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\app.component.ts" Url="Scripts/angular2/app/components/app.component.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\templates\app.template.html" Url="Scripts/angular2/app/templates/app.template.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\models\Persona.ts" Url="Scripts/angular2/app/models/Persona.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\app.component.js" Url="Scripts/angular2/app/components/app.component.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\app.component.js.map" Url="Scripts/angular2/app/components/app.component.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\models\persona.js" Url="Scripts/angular2/app/models/persona.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\models\persona.js.map" Url="Scripts/angular2/app/models/persona.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\main.js" Url="Scripts/angular2/app/main.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\main.js.map" Url="Scripts/angular2/app/main.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\typings.json" Url="Scripts/angular2/typings.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\tsconfig.json" Url="Scripts/angular2/tsconfig.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\package.json" Url="Scripts/angular2/package.json" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

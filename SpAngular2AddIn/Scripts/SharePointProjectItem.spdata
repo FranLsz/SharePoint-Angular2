@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
+    <ProjectItemFile Source="App.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\main.ts" Target="Scripts\angular2\app\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\components\app.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\templates\app.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\models\persona.ts" Target="Scripts\angular2\app\models\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\components\app.component.js" Target="Scripts\angular2\app\components\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\components\app.component.js.map" Target="Scripts\angular2\app\components\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\models\persona.js" Target="Scripts\angular2\app\models\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\models\persona.js.map" Target="Scripts\angular2\app\models\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\main.js" Target="Scripts\angular2\app\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\main.js.map" Target="Scripts\angular2\app\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\typings.json" Target="Scripts\angular2\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\tsconfig.json" Target="Scripts\angular2\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\package.json" Target="Scripts\angular2\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="8ce890d1-9b0a-47f7-8df3-a517571cf09b" 
+        solutionId="8ce890d1-9b0a-47f7-8df3-a517571cf09b" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SpAngular2AddIn"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="8685af27-966a-4e9b-95c4-5ae3221bedc6" />
+  </features>
+</package>
