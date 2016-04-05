@@ -15,5 +15,6 @@
     <File Path="Scripts\angular2\typings.json" Url="Scripts/angular2/typings.json" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\tsconfig.json" Url="Scripts/angular2/tsconfig.json" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\package.json" Url="Scripts/angular2/package.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app.config.js" Url="Scripts/angular2/app.config.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -28,26 +28,27 @@
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/http.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/router.js"></script>
 
+    <script type="text/javascript" src="../Scripts/angular2/app.config.js"></script>
 
     <script type="text/javascript">
-        ExecuteOrDelayUntilScriptLoaded(function() {
-             System.config({
-            map: {
-                app: '../Scripts/angular2/app/'
-            },
-            packages: {
-                app: {
-                    format: 'register',
-                    main: 'main',
-                    defaultExtension: 'js'
+        ExecuteOrDelayUntilScriptLoaded(function () {
+            System.config({
+                map: {
+                    app: BASE_URL + 'app/'
+                },
+                packages: {
+                    app: {
+                        format: 'register',
+                        main: 'main',
+                        defaultExtension: 'js'
+                    }
                 }
-            }
-        });
+            });
 
-        System.import('app').catch(console.error.bind(console));
+            System.import('app').catch(console.error.bind(console));
 
         }, "sp.js");
-       
+
 
     </script>
 

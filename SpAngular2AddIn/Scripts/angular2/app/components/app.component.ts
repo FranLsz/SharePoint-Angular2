@@ -4,7 +4,7 @@ import {Component, OnInit} from 'angular2/core'
 
 @Component({
     selector: 'app-main',
-    templateUrl: '../Scripts/angular2/app/templates/app.template.html',
+    templateUrl: BASE_URL + 'app/templates/app.template.html',
     directives: [ROUTER_DIRECTIVES],
 })
 
