@@ -1,8 +1,12 @@
 ﻿import {bootstrap} from 'angular2/platform/browser'
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {ROUTER_PROVIDERS} from 'angular2/router';
+import {ROUTER_PROVIDERS, APP_BASE_HREF} from 'angular2/router';
 import {AppComponent} from './components/app.component'
+import {provide} from 'angular2/core';
 
-const BASE_PATH = '[URL]';
-
-bootstrap(AppComponent, [HTTP_PROVIDERS, ROUTER_PROVIDERS])
+bootstrap(AppComponent, [
+    HTTP_PROVIDERS,
+    ROUTER_PROVIDERS,
+    //provide(APP_BASE_HREF, { useValue: window.location.href +'/#/' })
+    APP_BASE_HREF
+]);

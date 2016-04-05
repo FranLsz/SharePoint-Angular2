@@ -16,5 +16,13 @@
     <File Path="Scripts\angular2\tsconfig.json" Url="Scripts/angular2/tsconfig.json" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\package.json" Url="Scripts/angular2/package.json" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app.config.js" Url="Scripts/angular2/app.config.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\home.component.ts" Url="Scripts/angular2/app/components/home.component.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\home.component.js" Url="Scripts/angular2/app/components/home.component.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\home.component.js.map" Url="Scripts/angular2/app/components/home.component.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\templates\home.template.html" Url="Scripts/angular2/app/templates/home.template.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\login.component.ts" Url="Scripts/angular2/app/components/login.component.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\templates\login.template.html" Url="Scripts/angular2/app/templates/login.template.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\login.component.js" Url="Scripts/angular2/app/components/login.component.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\login.component.js.map" Url="Scripts/angular2/app/components/login.component.js.map" ReplaceContent="TRUE" />
   </Module>
 </Elements>

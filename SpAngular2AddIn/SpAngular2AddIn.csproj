@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\angular2\app\components\app.component.js.map" />
+    <None Include="Scripts\angular2\app\components\home.component.js.map" />
+    <None Include="Scripts\angular2\app\components\login.component.js.map" />
     <None Include="Scripts\angular2\app\main.js.map" />
     <None Include="Scripts\angular2\app\models\persona.js.map" />
     <None Include="Scripts\angular2\package.json" />
@@ -60,10 +62,14 @@
       <SharePointProjectItemId>{40ab73ce-576e-41ad-85e1-7afe506f849e}</SharePointProjectItemId>
     </None>
     <Content Include="Scripts\angular2\app\components\app.component.js" />
+    <Content Include="Scripts\angular2\app\components\home.component.js" />
+    <Content Include="Scripts\angular2\app\components\login.component.js" />
     <Content Include="Scripts\angular2\app\main.js" />
     <Content Include="Scripts\angular2\app\models\persona.js" />
     <Content Include="Scripts\angular2\app\templates\app.template.html" />
     <Content Include="Scripts\angular2\app.config.js" />
+    <Content Include="Scripts\angular2\app\templates\home.template.html" />
+    <Content Include="Scripts\angular2\app\templates\login.template.html" />
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\_references.js" />
@@ -105,6 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\angular2\app\components\app.component.ts" />
+    <TypeScriptCompile Include="Scripts\angular2\app\components\home.component.ts" />
+    <TypeScriptCompile Include="Scripts\angular2\app\components\login.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\main.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\models\persona.ts" />
   </ItemGroup>
