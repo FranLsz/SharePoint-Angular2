@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
     <script type="text/javascript" src="https://npmcdn.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
@@ -26,21 +26,44 @@
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/http.js"></script>
-    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/router.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/router.js"></script>-->
+
+
+    <!-- IE required polyfills, in this exact order -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/tools/system.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/typescript@1.8.9/lib/typescript.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
+
+    <!-- Router library -->
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
+    <!-- Http library -->
+    <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/http.dev.js"></script>
+
 
     <script type="text/javascript" src="../Scripts/angular2/app.config.js"></script>
 
     <script type="text/javascript">
+
         ExecuteOrDelayUntilScriptLoaded(function () {
+
             System.config({
+                transpiler: 'typescript',
+                typescriptOptions: {
+                    emitDecoratorMetadata: true
+                },
                 map: {
-                    app: BASE_URL + 'app/'
+                    app: BASE_URL + 'app'
                 },
                 packages: {
                     app: {
-                        format: 'register',
                         main: 'main',
-                        defaultExtension: 'js'
+                        defaultExtension: 'ts'
                     }
                 }
             });

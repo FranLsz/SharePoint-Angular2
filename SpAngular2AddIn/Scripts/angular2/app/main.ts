@@ -7,6 +7,5 @@ import {provide} from 'angular2/core';
 bootstrap(AppComponent, [
     HTTP_PROVIDERS,
     ROUTER_PROVIDERS,
-    //provide(APP_BASE_HREF, { useValue: window.location.href +'/#/' })
-    APP_BASE_HREF
+    provide(APP_BASE_HREF, { useValue: window.location.href +'/#/' })
 ]);

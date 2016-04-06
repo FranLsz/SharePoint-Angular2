@@ -32,7 +32,7 @@ export class AppComponent {
     }
 
     ngOnInit() {
-        var context = SP.ClientContext.get_current();
-        console.log(context);
+        //var context = SP.ClientContext.get_current();
+        //console.log(context);
     }
 }

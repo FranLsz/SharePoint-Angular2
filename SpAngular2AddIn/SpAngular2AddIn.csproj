@@ -47,25 +47,12 @@
       <SharePointProjectItemId>{e1e73d42-b6f6-4577-aa93-85918607af9f}</SharePointProjectItemId>
     </None>
     <Content Include="Pages\Elements.xml" />
-    <Content Include="Pages\.aspx" />
+    <Content Include="Pages\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\angular2\app\components\app.component.js.map" />
-    <None Include="Scripts\angular2\app\components\home.component.js.map" />
-    <None Include="Scripts\angular2\app\components\login.component.js.map" />
-    <None Include="Scripts\angular2\app\main.js.map" />
-    <None Include="Scripts\angular2\app\models\persona.js.map" />
-    <None Include="Scripts\angular2\package.json" />
-    <None Include="Scripts\angular2\tsconfig.json" />
-    <None Include="Scripts\angular2\typings.json" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{40ab73ce-576e-41ad-85e1-7afe506f849e}</SharePointProjectItemId>
     </None>
-    <Content Include="Scripts\angular2\app\components\app.component.js" />
-    <Content Include="Scripts\angular2\app\components\home.component.js" />
-    <Content Include="Scripts\angular2\app\components\login.component.js" />
-    <Content Include="Scripts\angular2\app\main.js" />
-    <Content Include="Scripts\angular2\app\models\persona.js" />
     <Content Include="Scripts\angular2\app\templates\app.template.html" />
     <Content Include="Scripts\angular2\app.config.js" />
     <Content Include="Scripts\angular2\app\templates\home.template.html" />

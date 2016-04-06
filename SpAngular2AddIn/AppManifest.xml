@@ -8,7 +8,7 @@
 >
   <Properties>
     <Title>SpAngular2AddIn</Title>
-    <StartPage>~appWebUrl/Pages/.aspx?{StandardTokens}</StartPage>
+    <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
