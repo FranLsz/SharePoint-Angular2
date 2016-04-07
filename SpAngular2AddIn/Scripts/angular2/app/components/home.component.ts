@@ -18,15 +18,18 @@ export class HomeComponent {
     };
 
     ngOnInit() {
-        this.getEmpleados();
+        //this.getEmpleados();
         this.addEmpleado();
     }
 
     getEmpleados() {
         this._empleadoService.getEmpleados().subscribe(
             data => {
-                this.listaEmpleados = data;
-                console.log(JSON.stringify(this.listaEmpleados));
+                this.listaEmpleados = data.d.results;
+
+                $.each(this.listaEmpleados, function (i, empleado) {
+                    console.log(empleado.Nombre);
+                });
             },
             err => { console.log("GET error"); },
             () => { console.log("Empleados GET Finished"); }
@@ -38,11 +41,10 @@ export class HomeComponent {
 
         this._empleadoService.addEmpleado(this.empleado).subscribe(
             data => {
-                this.listaEmpleados = data;
-                console.log(JSON.stringify(this.listaEmpleados));
+                this.getEmpleados();
             },
             err => { console.log("GET error"); },
-            () => { console.log("Empleados GET Finished"); }
+            () => { console.log("Empleados POST Finished"); }
         );
     }
 }
