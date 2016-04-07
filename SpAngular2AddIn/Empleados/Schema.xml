@@ -2,15 +2,41 @@
 <List xmlns:ows="Microsoft SharePoint" Title="Empleados" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Empleados" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
   <MetaData>
     <ContentTypes>
+
+
+
+
+
       
       
-    <ContentType ID="0x0100096ab2eb662d4097988a8a2756e1b955" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{7ffc6188-e4a9-4c91-adbf-be54ac18f4af}" Name="Apellidos" /><FieldRef ID="{3e943aef-41e7-43cf-b694-2c21244f9620}" Name="Puesto" /><FieldRef ID="{3cfbe064-e662-4cef-b24e-eec25a3acfa5}" Name="Salario" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+      
+    <ContentType ID="0x0100096ab2eb662d4097988a8a2756e1b955" Name="ListFieldsContentType">
+        <FieldRefs>
+          
+          
+          
+          
+          
+        <FieldRef ID="{7ffc6188-e4a9-4c91-adbf-be54ac18f4af}" Name="Apellidos" /><FieldRef ID="{3e943aef-41e7-43cf-b694-2c21244f9620}" Name="Puesto" /><FieldRef ID="{3cfbe064-e662-4cef-b24e-eec25a3acfa5}" Name="Salario" /><FieldRef ID="{60414ddf-cb8a-41e5-80f5-9baf38c29406}" Name="Nombre" /></FieldRefs>
+      </ContentType><ContentTypeRef ID="0x01">
         <Folder TargetName="Item" />
       </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
     <Fields>
+
+
+
+
+
       
-    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Nombre" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="Apellidos" ID="{7ffc6188-e4a9-4c91-adbf-be54ac18f4af}" DisplayName="Apellidos" Type="Text" Required="FALSE" /><Field Name="Puesto" ID="{3e943aef-41e7-43cf-b694-2c21244f9620}" DisplayName="Puesto" Type="Text" Required="TRUE" /><Field Name="Salario" ID="{3cfbe064-e662-4cef-b24e-eec25a3acfa5}" DisplayName="Salario" Type="Currency" Required="TRUE" /></Fields>
+      
+      
+      
+    <Field Name="Apellidos" ID="{7ffc6188-e4a9-4c91-adbf-be54ac18f4af}" DisplayName="Apellidos" Type="Text" Required="FALSE" /><Field Name="Puesto" ID="{3e943aef-41e7-43cf-b694-2c21244f9620}" DisplayName="Puesto" Type="Text" Required="TRUE" /><Field Name="Salario" ID="{3cfbe064-e662-4cef-b24e-eec25a3acfa5}" DisplayName="Salario" Type="Currency" Required="TRUE" /><Field Name="Nombre" ID="{60414ddf-cb8a-41e5-80f5-9baf38c29406}" DisplayName="Nombre" Type="Text" /></Fields>
     <Views>
+
+
+
+
       
       
     <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
@@ -18,10 +44,14 @@
         <XslLink Default="TRUE">main.xsl</XslLink>
         <RowLimit Paged="TRUE">30</RowLimit>
         <ViewFields>
+
+
           
         <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
         <Query>
           <OrderBy>
+
+
             
           <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
         </Query>
@@ -36,10 +66,22 @@
         <JSLink>clienttemplates.js</JSLink>
         <RowLimit Paged="TRUE">30</RowLimit>
         <ViewFields>
+
+
+
+
+
+
           
-        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Apellidos" /><FieldRef Name="Puesto" /><FieldRef Name="Salario" /></ViewFields>
+          
+          
+          
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Apellidos" /><FieldRef Name="Puesto" /><FieldRef Name="Salario" /><FieldRef Name="Nombre" /></ViewFields>
         <Query>
           <OrderBy>
+
+
             
           <FieldRef Name="ID"></FieldRef></OrderBy>
         </Query>

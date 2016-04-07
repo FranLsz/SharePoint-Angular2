@@ -6,16 +6,15 @@
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 
-<%-- El marcado y el script del elemento Content siguiente se pondrá en el <head> de la página. --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <SharePoint:ScriptLink Name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
     <meta name="WebPartPageExpansion" content="full" />
 
-    <!-- Agregue sus estilos CSS al siguiente archivo -->
-    <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
-
-
+    <!-- Pure CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 
     <!-- IE required polyfills, in this exact order -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
@@ -61,12 +60,10 @@
 
 </asp:Content>
 
-<%-- El marcado del elemento Content siguiente se pondrá en el elemento TitleArea de la página. --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
     Angular 2 App
 </asp:Content>
 
-<%-- El marcado y el script del elemento Content siguiente se pondrá en el <body> de la página. --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 
     <app-main></app-main>
