@@ -5,11 +5,12 @@
     <File Path="Scripts\angular2\app\main.ts" Url="Scripts/angular2/app/main.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\components\app.component.ts" Url="Scripts/angular2/app/components/app.component.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\templates\app.template.html" Url="Scripts/angular2/app/templates/app.template.html" ReplaceContent="TRUE" />
-    <File Path="Scripts\angular2\app\models\Persona.ts" Url="Scripts/angular2/app/models/Persona.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\models\empleado.ts" Url="Scripts/angular2/app/models/empleado.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app.config.js" Url="Scripts/angular2/app.config.js" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\components\home.component.ts" Url="Scripts/angular2/app/components/home.component.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\templates\home.template.html" Url="Scripts/angular2/app/templates/home.template.html" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\components\login.component.ts" Url="Scripts/angular2/app/components/login.component.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\templates\login.template.html" Url="Scripts/angular2/app/templates/login.template.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\services\empleado.service.ts" Url="Scripts/angular2/app/services/empleado.service.ts" ReplaceContent="TRUE" />
   </Module>
 </Elements>

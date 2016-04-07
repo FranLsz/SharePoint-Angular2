@@ -1,4 +1,4 @@
-﻿import {Persona} from '../models/persona'
+﻿import {Empleado} from '../models/empleado'
 import {HomeComponent} from './home.component'
 import {LoginComponent} from './login.component'
 import {ROUTER_DIRECTIVES, RouteConfig, Router, Location, Route, AsyncRoute} from 'angular2/router';
@@ -14,7 +14,7 @@ import {Component, OnInit} from 'angular2/core'
     {
         path: '/',
         component: HomeComponent,
-        useAsDefault: true,
+        //useAsDefault: true,
         name: 'Home'
     },
     {
@@ -24,15 +24,15 @@ import {Component, OnInit} from 'angular2/core'
     }
 ])
 export class AppComponent {
-    public persona: Persona;
+    public empleado: Empleado;
 
     constructor(router: Router) {
-        this.persona = { nombre: "Fran", edad: 20 }
-         router.navigate(['/Home']);
+        this.empleado = { nombre: "Fran", puesto: "Desarrollo", salario: 25750.25 }
+        router.navigate(['/Home']);
     }
 
     ngOnInit() {
-        var context = SP.ClientContext.get_current();
-        console.log(context);
+        //var context = SP.ClientContext.get_current();
+        //console.log(context);
     }
 }

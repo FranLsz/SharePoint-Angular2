@@ -63,7 +63,7 @@
 
 <%-- El marcado del elemento Content siguiente se pondrá en el elemento TitleArea de la página. --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+    Angular 2 App
 </asp:Content>
 
 <%-- El marcado y el script del elemento Content siguiente se pondrá en el <body> de la página. --%>

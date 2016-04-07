@@ -43,9 +43,18 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Empleados\EmpleadosInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{22948ce2-8669-47ba-a347-9f4630e13af5}</SharePointProjectItemId>
+    </None>
+    <None Include="Empleados\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8c72b1cb-81ef-4e61-ae2d-7fe5b385d3c6}</SharePointProjectItemId>
+    </None>
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e1e73d42-b6f6-4577-aa93-85918607af9f}</SharePointProjectItemId>
     </None>
+    <Content Include="Empleados\Elements.xml" />
+    <Content Include="Empleados\EmpleadosInstance\Elements.xml" />
+    <Content Include="Empleados\Schema.xml" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
   </ItemGroup>
@@ -101,8 +110,10 @@
     <TypeScriptCompile Include="Scripts\angular2\app\components\home.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\login.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\main.ts" />
-    <TypeScriptCompile Include="Scripts\angular2\app\models\persona.ts" />
+    <TypeScriptCompile Include="Scripts\angular2\app\models\empleado.ts" />
+    <TypeScriptCompile Include="Scripts\angular2\app\services\empleado.service.ts" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
