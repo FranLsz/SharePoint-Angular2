@@ -8,22 +8,21 @@ import {Component, OnInit} from 'angular2/core'
 })
 export class HomeComponent {
     private spContext: any;
-    public pruebadata: any;
+    public listaEmpleados: any;
 
-    constructor(private _personaService: EmpleadoService) {
+    constructor(private _empleadoService: EmpleadoService) {
         this.spContext = SP.ClientContext.get_current();
-        console.log(this.spContext);
+        //console.log(this.spContext);
     };
 
     ngOnInit() {
-        this._personaService.getPersonas().subscribe(
+        this._empleadoService.getEmpleados().subscribe(
             data => {
-                this.pruebadata = data;
-                console.log("GET OK");
-                console.log(JSON.stringify(this.pruebadata));
+                this.listaEmpleados = data;
+                console.log(JSON.stringify(this.listaEmpleados));
             },
             err => { console.log("GET error"); },
-            () => { console.log("GET finished"); }
+            () => { console.log("Empleados GET Finished"); }
         );
     }
 }
