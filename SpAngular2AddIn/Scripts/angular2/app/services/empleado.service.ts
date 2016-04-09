@@ -39,7 +39,7 @@ export class EmpleadoService {
             'Puesto': empleado.puesto,
             'Salario': empleado.salario.toString()
         };
-
+        
         var data = JSON.stringify(obj);
 
         return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items", data, { headers: this.headers }).map((res: Response) => res.json());

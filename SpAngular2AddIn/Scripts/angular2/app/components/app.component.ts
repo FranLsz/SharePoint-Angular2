@@ -27,8 +27,9 @@ export class AppComponent {
     public empleado: Empleado;
 
     constructor(router: Router) {
-        this.empleado = { nombre: "Fran", puesto: "Desarrollo", salario: 25750.25 }
+        this.empleado = new Empleado("Fran", "López", "Desarrollo",76976)
         router.navigate(['/Home']);
+        
     }
 
     ngOnInit() {

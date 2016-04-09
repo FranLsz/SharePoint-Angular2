@@ -9,27 +9,28 @@ import {Component, OnInit} from 'angular2/core'
 })
 export class HomeComponent {
     private spContext: any;
-    public listaEmpleados: any;
+    public listaEmpleados: Empleado[];
     public empleado: Empleado;
+    public empleado2: Empleado;
 
     constructor(private _empleadoService: EmpleadoService) {
-        this.spContext = SP.ClientContext.get_current();
-        //console.log(this.spContext);
+        //this.spContext = SP.ClientContext.get_current();
+        this.listaEmpleados = [];
     };
 
     ngOnInit() {
-        //this.getEmpleados();
+        // this.getEmpleados();
         this.addEmpleado();
+    }
+
+    onSelect(empleado: Empleado) {
+        alert("Seleccionado: " + empleado.nombre + ", " + empleado.salario);
     }
 
     getEmpleados() {
         this._empleadoService.getEmpleados().subscribe(
             data => {
-                this.listaEmpleados = data.d.results;
-
-                $.each(this.listaEmpleados, function (i, empleado) {
-                    console.log(empleado.Nombre);
-                });
+                this.listaEmpleados = Empleado.fromJsonList(data.d.results);
             },
             err => { console.log("GET error"); },
             () => { console.log("Empleados GET Finished"); }
@@ -37,7 +38,7 @@ export class HomeComponent {
     }
 
     addEmpleado() {
-        this.empleado = { nombre: 'Sofía', apellidos: 'López', puesto: 'Desarrollador', salario: 27750.25 }
+        this.empleado = new Empleado("Fran", "López", "Desarrollo", 123124)
 
         this._empleadoService.addEmpleado(this.empleado).subscribe(
             data => {
