@@ -1,0 +1,11 @@
+﻿<h2>¿Cómo te llamas?</h2>
+<input [(ngModel)]="empleado.nombre" placeholder="Nombre" type="text">
+<input [(ngModel)]="empleado.apellidos" placeholder="Apellidos" type="text">
+<h2>¿Puesto?</h2>
+<input [(ngModel)]="empleado.puesto" placeholder="Puesto" type="text">
+<h2>¿Salario?</h2>
+<input [(ngModel)]="empleado.salario" placeholder="Salario" type="text">
+<br /><br />
+<h3>Hola {{empleado.nombre}} {{empleado.apellidos}}, trabajas en {{empleado.puesto}} y ganas {{empleado.salario}} €</h3>
+<br />
+<input type="button" (click)="addEmpleado()" value="Añadir" />

@@ -1,0 +1,6 @@
+﻿<ul *ngFor="#empleado of listaEmpleados" (click)="onSelect(empleado)">
+    <li>
+        <strong>{{empleado.nombre}}</strong>
+        <div>{{empleado.salario}}</div>
+    </li>
+</ul>

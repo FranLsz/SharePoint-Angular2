@@ -11,5 +11,10 @@
     <ProjectItemFile Source="angular2\app\components\home.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\templates\home.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\services\empleado.service.ts" Target="Scripts\angular2\app\services\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\components\form-empleado.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\components\lista-empleados.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\templates\form-empleado.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\templates\lista-empleados.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\models\datos-evento.ts" Target="Scripts\angular2\app\models\" Type="ElementFile" />
   </Files>
 </ProjectItem>

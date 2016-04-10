@@ -1,21 +1,5 @@
 ﻿<h1>HOME</h1>
 
-<h2>¿Cómo te llamas?</h2>
-<input [(ngModel)]="empleado.nombre" placeholder="Nombre" type="text">
-<input [(ngModel)]="empleado.apellidos" placeholder="Apellidos" type="text">
-<h2>¿Puesto?</h2>
-<input [(ngModel)]="empleado.puesto" placeholder="Puesto" type="text">
-<h2>¿Salario?</h2>
-<input [(ngModel)]="empleado.salario" placeholder="Salario" type="text">
-<br /><br />
-<h3>Hola {{empleado.nombre}} {{empleado.apellidos}}, trabajas en {{empleado.puesto}} y ganas {{empleado.salario}} €</h3>
-<br/>
-<input type="button" (click)="addEmpleado()" value="Añadir"/>
-<br /><br />
+<form-empleado [empleado]="empleado" [listaEmpleados]="listaEmpleados" (formEmpleadoEvt)="manejarEventos($event)"></form-empleado>
 
-<ul *ngFor="#empleado of listaEmpleados" (click)="onSelect(empleado)">
-    <li>
-        <strong>{{empleado.nombre}}</strong>
-        <div>{{empleado.salario}}</div>
-    </li>
-</ul>
+<lista-empleados [listaEmpleados]="listaEmpleados"></lista-empleados>

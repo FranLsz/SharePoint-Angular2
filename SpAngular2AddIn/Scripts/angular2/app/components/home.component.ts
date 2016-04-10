@@ -1,11 +1,15 @@
 ﻿import {Empleado} from '../models/empleado';
+import {DatosEvento} from '../models/datos-evento';
+import {FormEmpleadoComponent} from './form-empleado.component';
+import {ListaEmpleadosComponent} from './lista-empleados.component';
 import {EmpleadoService} from '../services/empleado.service'
 import {Component, OnInit} from 'angular2/core'
 
 @Component({
     selector: 'home',
     templateUrl: BASE_URL + '/templates/home.template.html',
-    providers: [EmpleadoService]
+    providers: [EmpleadoService],
+    directives: [FormEmpleadoComponent, ListaEmpleadosComponent]
 })
 
 export class HomeComponent {
@@ -21,20 +25,6 @@ export class HomeComponent {
         this.getEmpleados();
     }
 
-    onSelect(empleado: Empleado) {
-        this._empleadoService.deleteEmpleado(empleado).subscribe(
-            data => {
-                var i = this.listaEmpleados.map(function (e) { return e.id; }).indexOf(empleado.id);
-                this.listaEmpleados.splice(i, 1);
-            },
-            err => {
-                console.log("DELETE Empleados Error: " + err._body);
-            },
-            () => { /**/ }
-        );
-
-    }
-
     getEmpleados() {
         this._empleadoService.getEmpleados().subscribe(
             data => {
@@ -45,13 +35,11 @@ export class HomeComponent {
         );
     }
 
-    addEmpleado() {
-        this._empleadoService.addEmpleado(this.empleado).subscribe(
-            data => {
-                this.listaEmpleados.push(Empleado.fromJson(data.d));
-            },
-            err => { console.log("POST Empleados Error: " + err._body); },
-            () => { /**/ }
-        );
+    manejarEventos(arg: DatosEvento) {
+        switch (arg.orden) {
+            case "AGREGAR_A_LISTA":
+                this.listaEmpleados.push(arg.datos);
+                break;
+        }
     }
 }

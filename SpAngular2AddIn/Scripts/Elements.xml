@@ -10,5 +10,10 @@
     <File Path="Scripts\angular2\app\components\home.component.ts" Url="Scripts/angular2/app/components/home.component.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\templates\home.template.html" Url="Scripts/angular2/app/templates/home.template.html" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\services\empleado.service.ts" Url="Scripts/angular2/app/services/empleado.service.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\form-empleado.component.ts" Url="Scripts/angular2/app/components/form-empleado.component.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\lista-empleados.component.ts" Url="Scripts/angular2/app/components/lista-empleados.component.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\templates\form-empleado.template.html" Url="Scripts/angular2/app/templates/form-empleado.template.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\templates\lista-empleados.template.html" Url="Scripts/angular2/app/templates/lista-empleados.template.html" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\models\datos-evento.ts" Url="Scripts/angular2/app/models/datos-evento.ts" ReplaceContent="TRUE" />
   </Module>
 </Elements>
