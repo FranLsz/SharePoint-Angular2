@@ -1,5 +1,5 @@
 ﻿import {HomeComponent} from './home.component'
-import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
+import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router'
 import {Component, OnInit} from 'angular2/core'
 
 @Component({

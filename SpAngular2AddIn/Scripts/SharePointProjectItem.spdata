@@ -16,5 +16,7 @@
     <ProjectItemFile Source="angular2\app\templates\form-empleado.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\templates\lista-empleados.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\models\datos-evento.ts" Target="Scripts\angular2\app\models\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\components\detalle-empleado.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\templates\detalle-empleado.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
   </Files>
 </ProjectItem>

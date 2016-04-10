@@ -64,6 +64,7 @@
     </None>
     <Content Include="Scripts\angular2\app\templates\app.template.html" />
     <Content Include="Scripts\angular2\app\app.config.js" />
+    <Content Include="Scripts\angular2\app\templates\detalle-empleado.template.html" />
     <Content Include="Scripts\angular2\app\templates\form-empleado.template.html" />
     <Content Include="Scripts\angular2\app\templates\home.template.html" />
     <Content Include="Scripts\angular2\app\templates\lista-empleados.template.html" />
@@ -108,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\angular2\app\components\app.component.ts" />
+    <TypeScriptCompile Include="Scripts\angular2\app\components\detalle-empleado.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\form-empleado.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\home.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\lista-empleados.component.ts" />

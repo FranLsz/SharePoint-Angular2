@@ -1,0 +1,19 @@
+﻿<fieldset *ngIf="empleado" style="padding: 30px">
+    <legend> Detalles del empleado </legend>
+    <h1>
+        <b>{{empleado.nombre}} {{empleado.apellidos}}</b>
+    </h1>
+    <p>
+        Identificador: <b>{{empleado.id}}</b>
+    </p>
+    <p>
+        Puesto: <b>{{empleado.puesto}}</b>
+    </p>
+    <p>
+        Salario: <b>{{empleado.salario}} €</b>
+    </p>
+
+    <input type="button" value="Editar" />
+    <input type="button" value="Borrar" (click)="deleteEmpleado()" />
+
+</fieldset>

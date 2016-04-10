@@ -1,30 +1,29 @@
-﻿import {Empleado} from '../models/empleado';
+﻿import {Empleado} from '../models/empleado'
+import {DatosEvento} from '../models/datos-evento'
 import {EmpleadoService} from '../services/empleado.service'
-import {Component, OnInit} from 'angular2/core'
+import {Component, OnInit, EventEmitter} from 'angular2/core'
 
 @Component({
     selector: 'lista-empleados',
     templateUrl: BASE_URL + '/templates/lista-empleados.template.html',
-    providers: [EmpleadoService],
-    inputs: ['listaEmpleados']
+    inputs: ['listaEmpleados'],
+    outputs: ['listaEmpleadosEvt']
 })
 
 export class ListaEmpleadosComponent {
     public listaEmpleados: Empleado[];
+    public empleado: Empleado;
+    public listaEmpleadosEvt: EventEmitter;
 
     constructor(private _empleadoService: EmpleadoService) {
-        this.listaEmpleados = [];
+        this.listaEmpleadosEvt = new EventEmitter();
     };
 
     onSelect(empleado: Empleado) {
-        this._empleadoService.deleteEmpleado(empleado).subscribe(
-            data => {
-                var i = this.listaEmpleados.map(function (e) { return e.id; }).indexOf(empleado.id);
-                this.listaEmpleados.splice(i, 1);
-            },
-            err => {
-                console.log("DELETE Empleados Error: " + err._body);
-            }
-        );
+        this.lanzarEvento("DETALLE", empleado);
+    }
+
+    lanzarEvento(orden: string, datos: any) {
+        this.listaEmpleadosEvt.next(new DatosEvento(orden, datos));
     }
 }

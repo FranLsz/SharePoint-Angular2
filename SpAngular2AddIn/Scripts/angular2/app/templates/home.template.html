@@ -1,5 +1,11 @@
-﻿<h1>HOME</h1>
+﻿<h1>Gestión de empleados</h1>
+<div>
+    <div style="float:left">
+        <lista-empleados [listaEmpleados]="listaEmpleados" (listaEmpleadosEvt)="manejarEventos($event)"></lista-empleados>
+    </div>
+    <div style="float:left">
+        <form-empleado [empleado]="empleadoForm" (formEmpleadoEvt)="manejarEventos($event)"></form-empleado>
+        <detalle-empleado [empleado]="empleadoDetalle" (detalleEmpleadoEvt)="manejarEventos($event)"></detalle-empleado>
+    </div>
 
-<form-empleado [empleado]="empleado" [listaEmpleados]="listaEmpleados" (formEmpleadoEvt)="manejarEventos($event)"></form-empleado>
-
-<lista-empleados [listaEmpleados]="listaEmpleados"></lista-empleados>
+</div>

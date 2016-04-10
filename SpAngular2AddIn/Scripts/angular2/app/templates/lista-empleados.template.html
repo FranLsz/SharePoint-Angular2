@@ -1,6 +1,13 @@
-﻿<ul *ngFor="#empleado of listaEmpleados" (click)="onSelect(empleado)">
-    <li>
-        <strong>{{empleado.nombre}}</strong>
-        <div>{{empleado.salario}}</div>
-    </li>
-</ul>
+﻿<fieldset style="padding: 30px;">
+    <legend> Lista de empleados </legend>
+
+    <ul *ngFor="#empleado of listaEmpleados" (click)="onSelect(empleado)">
+        <li style="list-style-type: none;">
+            <strong>{{empleado.apellidos}}, {{empleado.nombre}}</strong>
+            <br /><i>ID: {{empleado.id}}</i>
+        </li>
+    </ul>
+
+    <label *ngIf="listaEmpleados.length==0">-Sin empleados-</label>
+
+</fieldset>
