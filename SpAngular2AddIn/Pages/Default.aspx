@@ -9,14 +9,14 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <SharePoint:ScriptLink Name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
     <meta name="WebPartPageExpansion" content="full" />
-
+    
     <!-- Pure CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 
-    <!-- IE required polyfills, in this exact order -->
+    <!-- IE required polyfills -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
     <script type="text/javascript" src="https://npmcdn.com/angular2@2.0.0-beta.9/es6/dev/src/testing/shims_for_IE.js"></script>
@@ -29,10 +29,12 @@
 
     <!-- Router library -->
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
+
     <!-- Http library -->
     <script type="text/javascript" src="https://code.angularjs.org/2.0.0-beta.9/http.dev.js"></script>
+
     <!-- Config and global vars JS file -->
-    <script type="text/javascript" src="../Scripts/angular2/app.config.js"></script>
+    <script type="text/javascript" src="../Scripts/angular2/app/app.config.js"></script>
 
     <script type="text/javascript">
 
@@ -42,7 +44,7 @@
                 emitDecoratorMetadata: true
             },
             map: {
-                app: BASE_URL + 'app'
+                app: BASE_URL
             },
             packages: {
                 app: {

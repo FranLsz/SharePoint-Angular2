@@ -7,11 +7,9 @@
     <ProjectItemFile Source="angular2\app\components\app.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\templates\app.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\models\empleado.ts" Target="Scripts\angular2\app\models\" Type="ElementFile" />
-    <ProjectItemFile Source="angular2\app.config.js" Target="Scripts\angular2\" Type="ElementFile" />
+    <ProjectItemFile Source="angular2\app\app.config.js" Target="Scripts\angular2\app\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\components\home.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\templates\home.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
-    <ProjectItemFile Source="angular2\app\components\login.component.ts" Target="Scripts\angular2\app\components\" Type="ElementFile" />
-    <ProjectItemFile Source="angular2\app\templates\login.template.html" Target="Scripts\angular2\app\templates\" Type="ElementFile" />
     <ProjectItemFile Source="angular2\app\services\empleado.service.ts" Target="Scripts\angular2\app\services\" Type="ElementFile" />
   </Files>
 </ProjectItem>

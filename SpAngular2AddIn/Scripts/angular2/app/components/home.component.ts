@@ -4,27 +4,35 @@ import {Component, OnInit} from 'angular2/core'
 
 @Component({
     selector: 'home',
-    templateUrl: BASE_URL + 'app/templates/home.template.html',
+    templateUrl: BASE_URL + '/templates/home.template.html',
     providers: [EmpleadoService]
 })
+
 export class HomeComponent {
-    private spContext: any;
     public listaEmpleados: Empleado[];
     public empleado: Empleado;
-    public empleado2: Empleado;
 
     constructor(private _empleadoService: EmpleadoService) {
-        //this.spContext = SP.ClientContext.get_current();
+        this.empleado = new Empleado();
         this.listaEmpleados = [];
     };
 
     ngOnInit() {
-        // this.getEmpleados();
-        this.addEmpleado();
+        this.getEmpleados();
     }
 
     onSelect(empleado: Empleado) {
-        alert("Seleccionado: " + empleado.nombre + ", " + empleado.salario);
+        this._empleadoService.deleteEmpleado(empleado).subscribe(
+            data => {
+                var i = this.listaEmpleados.map(function (e) { return e.id; }).indexOf(empleado.id);
+                this.listaEmpleados.splice(i, 1);
+            },
+            err => {
+                console.log("DELETE Empleados Error: " + err._body);
+            },
+            () => { /**/ }
+        );
+
     }
 
     getEmpleados() {
@@ -32,20 +40,18 @@ export class HomeComponent {
             data => {
                 this.listaEmpleados = Empleado.fromJsonList(data.d.results);
             },
-            err => { console.log("GET error"); },
-            () => { console.log("Empleados GET Finished"); }
+            err => { console.log("GET Empleados Error: " + err._body); },
+            () => { /**/ }
         );
     }
 
     addEmpleado() {
-        this.empleado = new Empleado("Fran", "López", "Desarrollo", 123124)
-
         this._empleadoService.addEmpleado(this.empleado).subscribe(
             data => {
-                this.getEmpleados();
+                this.listaEmpleados.push(Empleado.fromJson(data.d));
             },
-            err => { console.log("GET error"); },
-            () => { console.log("Empleados POST Finished"); }
+            err => { console.log("POST Empleados Error: " + err._body); },
+            () => { /**/ }
         );
     }
 }

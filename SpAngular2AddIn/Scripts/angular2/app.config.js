@@ -1,1 +1,0 @@
-﻿var BASE_URL = '../Scripts/angular2/';
