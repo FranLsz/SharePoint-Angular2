@@ -1,6 +1,6 @@
-﻿import {HomeComponent} from './home.component'
-import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router'
-import {Component, OnInit} from 'angular2/core'
+﻿import {GestionEmpleadosComponent}                  from './gestion-empleados.component'
+import {ROUTER_DIRECTIVES, RouteConfig, Router}     from 'angular2/router'
+import {Component, OnInit}                          from 'angular2/core'
 
 @Component({
     selector: 'app-main',
@@ -11,17 +11,17 @@ import {Component, OnInit} from 'angular2/core'
 @RouteConfig([
     {
         path: '/',
-        component: HomeComponent,
-        name: 'Home'
+        component: GestionEmpleadosComponent,
+        name: 'GestionEmpleados'
     }
 ])
 
 export class AppComponent {
 
-    constructor(private router: Router) {}
+    constructor(private router: Router) { }
 
     ngOnInit() {
-        this.router.navigate(['/Home']);
+        this.router.navigate(['/GestionEmpleados']);
         //var context = SP.ClientContext.get_current();
     }
 }

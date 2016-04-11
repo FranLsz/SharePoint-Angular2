@@ -1,7 +1,7 @@
-﻿import {Empleado} from '../models/empleado'
-import {DatosEvento} from '../models/datos-evento'
-import {EmpleadoService} from '../services/empleado.service'
-import {Component, OnInit, EventEmitter} from 'angular2/core'
+﻿import {Empleado}                           from '../models/empleado'
+import {DatosEvento}                        from '../models/datos-evento'
+import {EmpleadoService}                    from '../services/empleado.service'
+import {Component, OnInit, EventEmitter}    from 'angular2/core'
 
 @Component({
     selector: 'lista-empleados',

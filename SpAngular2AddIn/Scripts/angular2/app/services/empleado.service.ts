@@ -1,18 +1,19 @@
-﻿import {Empleado} from '../models/empleado';
+﻿import {Empleado}                   from '../models/empleado';
 import 'rxjs/add/operator/map';
-import {Http, Response, Headers} from 'angular2/http';
-import {Injectable} from 'angular2/core';
+import {Http, Response, Headers}    from 'angular2/http';
+import {Injectable}                 from 'angular2/core';
 
 @Injectable()
 export class EmpleadoService {
+
     private spApiUrl: string;
 
     constructor(private http: Http) {
         this.spApiUrl = _spPageContextInfo.webServerRelativeUrl;
     }
 
-    // GET HEADERS
-    getHeaders(verb?: string) {
+    // SET HEADERS
+    setHeaders(verb?: string) {
         var headers = new Headers();
 
         var digest = document.getElementById('__REQUESTDIGEST').value;
@@ -39,7 +40,7 @@ export class EmpleadoService {
 
     // GET
     getEmpleados() {
-        return this.http.get(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items", { headers: this.getHeaders() }).map((res: Response) => res.json());
+        return this.http.get(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items", { headers: this.setHeaders() }).map((res: Response) => res.json());
     }
 
     // POST
@@ -54,7 +55,7 @@ export class EmpleadoService {
         };
 
         var data = JSON.stringify(obj);
-        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items", data, { headers: this.getHeaders("POST") }).map((res: Response) => res.json());
+        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items", data, { headers: this.setHeaders("POST") }).map((res: Response) => res.json());
     }
 
     // PUT
@@ -69,12 +70,12 @@ export class EmpleadoService {
         };
 
         var data = JSON.stringify(obj);
-        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items(" + empleado.id + ")", data, { headers: this.getHeaders("PUT") });
+        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items(" + empleado.id + ")", data, { headers: this.setHeaders("PUT") });
     }
 
     // DELETE
     deleteEmpleado(empleado: Empleado) {
-        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items(" + empleado.id + ")", null, { headers: this.getHeaders("DELETE")});
+        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items(" + empleado.id + ")", null, { headers: this.setHeaders("DELETE") });
     }
 
 }

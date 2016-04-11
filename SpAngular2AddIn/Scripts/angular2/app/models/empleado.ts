@@ -1,4 +1,5 @@
 ﻿export class Empleado {
+
     id: number;
     nombre: string;
     apellidos: string;
@@ -18,6 +19,10 @@
             this.puesto = puesto;
             this.salario = salario;
         }
+    }
+
+    public detach() {
+        return new Empleado(this.nombre, this.apellidos, this.puesto, this.salario, this.id);
     }
 
     public static fromJson(json: any) {

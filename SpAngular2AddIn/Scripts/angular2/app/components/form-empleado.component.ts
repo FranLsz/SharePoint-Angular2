@@ -1,13 +1,13 @@
-﻿import {Empleado}                                                       from '../models/empleado'
-import {DatosEvento}                                                    from '../models/datos-evento'
-import {EmpleadoService}                                                from '../services/empleado.service'
-import {NgForm, Control, Validators, FormBuilder, ControlGroup}         from 'angular2/common'
-import {Component, OnInit, OnChanges, EventEmitter}                     from 'angular2/core'
+﻿import {Empleado}                                                   from '../models/empleado'
+import {DatosEvento}                                                from '../models/datos-evento'
+import {EmpleadoService}                                            from '../services/empleado.service'
+import {NgForm, Control, Validators, FormBuilder, ControlGroup}     from 'angular2/common'
+import {Component, OnInit, OnChanges, EventEmitter}                 from 'angular2/core'
 
 @Component({
     selector: 'form-empleado',
     templateUrl: BASE_URL + '/templates/form-empleado.template.html',
-    inputs: ['empleado'],
+    inputs: ['empleado', 'accion'],
     outputs: ['formEmpleadoEvt']
 })
 
@@ -21,23 +21,17 @@ export class FormEmpleadoComponent {
 
     constructor(private _empleadoService: EmpleadoService, private builder: FormBuilder) {
         this.formEmpleadoEvt = new EventEmitter();
-
-
     };
+
     ngOnInit() {
-        this.accion = "Nuevo empleado";
         this.btnAccion = "Dar de alta";
     }
 
-    ngOnChanges(registro) {
-        if (registro.empleado != null) {
-            if (registro.empleado.currentValue.id > 0) {
-                this.accion = "Modificar empleado";
-                this.btnAccion = "Guardar cambios";
-            } else {
-                this.accion = "Nuevo empleado"
-                this.btnAccion = "Dar de alta";
-            }
+    ngOnChanges(cambios) {
+        if (cambios.accion.currentValue == "Nuevo empleado") {
+            this.btnAccion = "Dar de alta";
+        } else {
+            this.btnAccion = "Guardar cambios";
         }
     }
 
@@ -47,10 +41,7 @@ export class FormEmpleadoComponent {
                 data => {
                     this.lanzarEvento("AGREGAR_A_LISTA", Empleado.fromJson(data.d));
 
-                    // Reset de los campos
-                    this.empleado = new Empleado();
-                    this.activo = false;
-                    setTimeout(() => this.activo = true, 0);
+                    this.reiniciarCampos();
                 },
                 err => { console.log("POST Empleados Error: " + err._body); }
             );
@@ -62,10 +53,7 @@ export class FormEmpleadoComponent {
                     this.accion = "Nuevo empleado"
                     this.btnAccion = "Dar de alta";
 
-                    // Reset de los campos
-                    this.empleado = new Empleado();
-                    this.activo = false;
-                    setTimeout(() => this.activo = true, 0);
+                    this.reiniciarCampos();
                 },
                 err => {
                     console.log("PUT Empleado Error: " + err._body);
@@ -74,8 +62,11 @@ export class FormEmpleadoComponent {
         }
     }
 
-    get diagnostico() {
-        return "de lujo: " + JSON.stringify(this.empleado);
+    private reiniciarCampos() {
+        // Reset de los campos
+        this.empleado = new Empleado();
+        this.activo = false;
+        setTimeout(() => this.activo = true, 0);
     }
 
     lanzarEvento(orden: string, datos: any) {

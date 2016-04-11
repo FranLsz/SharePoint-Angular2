@@ -7,7 +7,7 @@
     <File Path="Scripts\angular2\app\templates\app.template.html" Url="Scripts/angular2/app/templates/app.template.html" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\models\empleado.ts" Url="Scripts/angular2/app/models/empleado.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\app.config.js" Url="Scripts/angular2/app/app.config.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\angular2\app\components\home.component.ts" Url="Scripts/angular2/app/components/home.component.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular2\app\components\gestion-empleados.component.ts" Url="Scripts/angular2/app/components/gestion-empleados.component.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\templates\home.template.html" Url="Scripts/angular2/app/templates/home.template.html" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\services\empleado.service.ts" Url="Scripts/angular2/app/services/empleado.service.ts" ReplaceContent="TRUE" />
     <File Path="Scripts\angular2\app\components\form-empleado.component.ts" Url="Scripts/angular2/app/components/form-empleado.component.ts" ReplaceContent="TRUE" />

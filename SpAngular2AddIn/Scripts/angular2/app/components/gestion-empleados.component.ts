@@ -1,10 +1,10 @@
-﻿import {Empleado} from '../models/empleado'
-import {DatosEvento} from '../models/datos-evento'
-import {FormEmpleadoComponent} from './form-empleado.component'
-import {ListaEmpleadosComponent} from './lista-empleados.component'
-import {DetalleEmpleadoComponent} from './detalle-empleado.component'
-import {EmpleadoService} from '../services/empleado.service'
-import {Component, OnInit} from 'angular2/core'
+﻿import {Empleado}                   from '../models/empleado'
+import {DatosEvento}                from '../models/datos-evento'
+import {FormEmpleadoComponent}      from './form-empleado.component'
+import {ListaEmpleadosComponent}    from './lista-empleados.component'
+import {DetalleEmpleadoComponent}   from './detalle-empleado.component'
+import {EmpleadoService}            from '../services/empleado.service'
+import {Component, OnInit}          from 'angular2/core'
 
 @Component({
     selector: 'home',
@@ -13,7 +13,8 @@ import {Component, OnInit} from 'angular2/core'
     directives: [FormEmpleadoComponent, ListaEmpleadosComponent, DetalleEmpleadoComponent]
 })
 
-export class HomeComponent {
+export class GestionEmpleadosComponent {
+
     public empleadoForm: Empleado;
     public accionForm: string;
     public empleadoDetalle: Empleado;
@@ -45,20 +46,21 @@ export class HomeComponent {
                 break;
             case "ACTUALIZAR_DE_LA_LISTA":
                 for (var i = 0; i < this.listaEmpleados.length; i++) {
-                    if (this.listaEmpleados[i].id == arg.datos.id) 
+                    if (this.listaEmpleados[i].id == arg.datos.id)
                         this.listaEmpleados[i] = arg.datos;
                 }
+                this.accionForm = "Nuevo empleado";
                 break;
             case "DETALLE":
-                this.empleadoDetalle = new Empleado(arg.datos.nombre, arg.datos.apellidos, arg.datos.puesto, arg.datos.salario, arg.datos.id);
+                this.empleadoDetalle = arg.datos;
                 break;
             case "DELETE":
                 var i = this.listaEmpleados.map(function (e) { return e.id; }).indexOf(arg.datos.id);
                 this.listaEmpleados.splice(i, 1);
                 break;
             case "EDITAR":
-                this.empleadoForm = new Empleado(arg.datos.nombre, arg.datos.apellidos, arg.datos.puesto, arg.datos.salario, arg.datos.id);
-                //this.accionForm = "Modificar empleado";
+                this.accionForm = "Modificar empleado";
+                this.empleadoForm = arg.datos.detach();
                 break;
         }
     }

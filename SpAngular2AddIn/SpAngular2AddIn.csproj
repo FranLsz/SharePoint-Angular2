@@ -111,7 +111,7 @@
     <TypeScriptCompile Include="Scripts\angular2\app\components\app.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\detalle-empleado.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\form-empleado.component.ts" />
-    <TypeScriptCompile Include="Scripts\angular2\app\components\home.component.ts" />
+    <TypeScriptCompile Include="Scripts\angular2\app\components\gestion-empleados.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\components\lista-empleados.component.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\main.ts" />
     <TypeScriptCompile Include="Scripts\angular2\app\models\empleado.ts" />

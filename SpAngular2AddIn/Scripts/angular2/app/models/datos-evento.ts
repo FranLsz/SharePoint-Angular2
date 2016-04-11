@@ -1,4 +1,5 @@
 ﻿export class DatosEvento {
+
     orden: string;
     datos: any;
 

@@ -2,7 +2,7 @@
 <div>
 
     <div style="float:left">
-        <form-empleado [empleado]="empleadoForm" (formEmpleadoEvt)="manejarEventos($event)"></form-empleado>
+        <form-empleado [empleado]="empleadoForm" [accion]="accionForm" (formEmpleadoEvt)="manejarEventos($event)"></form-empleado>
         <detalle-empleado [empleado]="empleadoDetalle" (detalleEmpleadoEvt)="manejarEventos($event)"></detalle-empleado>
     </div>
     <div style="float:left">
