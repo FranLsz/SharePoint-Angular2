@@ -19,6 +19,11 @@ export class DetalleEmpleadoComponent {
         this.detalleEmpleadoEvt = new EventEmitter();
     }
 
+    editEmpleado() {
+        this.lanzarEvento("EDITAR", this.empleado);
+        setTimeout(() => this.empleado = null, 0);
+    }
+
     deleteEmpleado() {
         this._empleadoService.deleteEmpleado(this.empleado).subscribe(
             data => {

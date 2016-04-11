@@ -23,6 +23,11 @@ export class EmpleadoService {
             case "POST":
                 headers.set('Content-type', 'application/json;odata=verbose');
                 break;
+            case "PUT":
+                headers.set('Content-type', 'application/json;odata=verbose');
+                headers.set("IF-MATCH", "*");
+                headers.set("X-HTTP-Method", "MERGE");
+                break;
             case "DELETE":
                 headers.set("IF-MATCH", "*");
                 headers.set("X-HTTP-Method", "DELETE");
@@ -49,8 +54,22 @@ export class EmpleadoService {
         };
 
         var data = JSON.stringify(obj);
-
         return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items", data, { headers: this.getHeaders("POST") }).map((res: Response) => res.json());
+    }
+
+    // PUT
+    putEmpleado(empleado: Empleado) {
+
+        var obj = {
+            '__metadata': { 'type': 'SP.Data.EmpleadosListItem' },
+            'Nombre': empleado.nombre,
+            'Apellidos': empleado.apellidos,
+            'Puesto': empleado.puesto,
+            'Salario': empleado.salario.toString()
+        };
+
+        var data = JSON.stringify(obj);
+        return this.http.post(this.spApiUrl + "/_api/web/lists/getByTitle('Empleados')/items(" + empleado.id + ")", data, { headers: this.getHeaders("PUT") });
     }
 
     // DELETE

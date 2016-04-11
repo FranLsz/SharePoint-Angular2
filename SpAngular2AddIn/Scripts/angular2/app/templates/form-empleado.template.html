@@ -1,12 +1,31 @@
 ﻿<fieldset style="padding: 30px">
     <legend> {{accion}} </legend>
-    <h2>Nombre y apellidos</h2>
-    <input [(ngModel)]="empleado.nombre" placeholder="Nombre" type="text">
-    <input [(ngModel)]="empleado.apellidos" placeholder="Apellidos" type="text">
-    <h2>Puesto de trabajo</h2>
-    <input [(ngModel)]="empleado.puesto" placeholder="Puesto" type="text">
-    <h2>Salario</h2>
-    <input [(ngModel)]="empleado.salario" placeholder="Salario" type="text">
-    <br /><br />
-    <input type="button" (click)="addEmpleado()" value="{{btnAccion}}" />
+    <!--{{diagnostico}}-->
+    <form *ngIf="activo" (ngSubmit)="onSubmit()" #empleadoForm="ngForm">
+
+        <!-- Nombre y apellidos -->
+        <h2>Nombre y apellidos</h2>
+        <input [(ngModel)]="empleado.nombre" ngControl="nombre" #nombre="ngForm" placeholder="Nombre" type="text" required>
+        <div [hidden]="nombre.valid || nombre.pristine" style="color: red">
+            Nombre requerido
+        </div><br />
+        <input [(ngModel)]="empleado.apellidos" placeholder="Apellidos (opcional)" type="text"><br /><br />
+
+        <!-- Puesto de trabajo -->
+        <h2>Puesto de trabajo</h2>
+        <input [(ngModel)]="empleado.puesto" ngControl="puesto" #puesto="ngForm" placeholder="Desarrollo, ventas, análisis..." type="text" required>
+        <div [hidden]="puesto.valid || puesto.pristine" style="color: red">
+            Puesto requerido
+        </div><br /><br />
+
+        <!-- Salario -->
+        <h2>Salario</h2>
+        <input [(ngModel)]="empleado.salario" ngControl="salario" #salario="ngForm" pattern="^\d*\.?\d*$" placeholder="€ (Euros)" type="text" required>
+        <div [hidden]="salario.valid || salario.pristine" style="color: red">
+            Salario no válido
+        </div><br /><br />
+
+        <br /><br /><input type="submit" value="{{btnAccion}}" [disabled]="!empleadoForm.form.valid" />
+    </form>
+
 </fieldset>
